@@ -1,0 +1,111 @@
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin: 0 auto;
+   width: 740px;
+}
+
+.title {
+   text-align: center;
+   color: #78AA88;
+   font-size: 30px;
+   margin-top: 10px;
+}
+
+.output {
+   border: 1px solid black;
+   margin-top: 10px;
+   width: 740px;
+   height: 220px;
+}
+
+.keyboard {
+   width: 740px;
+   height: 255px;
+   background-color: #888888;
+   border: 3px solid black;
+   border-radius: 4px;
+   margin: 0 auto;
+   margin-top: 10px;
+
+   .insideKeyboard {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 7px 7px;
+      width: 720px;
+      height: 235px;
+      // background-color: red;
+      margin: 0 auto;
+      margin-top: 7px;
+
+
+      .firstLineKeyboard {
+         height: 40px;
+         // background-color: blue;
+      }
+   }
+}
+
+button {
+   padding: 8px 16px;
+   background-color: black;
+   opacity: 0.5;
+   border-radius: 4px;
+   color: white;
+   transition: 0.7s;
+
+   &:hover {
+      background-color: #78AA88;
+   }
+}
+
+.black-keys {
+   opacity: 1;
+}
+
+.enter {
+   padding: 8px 20px;
+}
+
+.shift-left {
+   padding: 8px 28px;
+}
+
+.space {
+   padding: 8px 80px;
+}
+
+.shift-right {
+   padding: 8px 10px;
+}
+
+.ctrl {
+   padding: 8px 12px;
+}
+
+.fn {
+   padding: 8px 12px;
+}
+
+.opt {
+   padding: 8px 12px;
+}
+
+.meta {
+   padding: 8px 8px;
+}
+
+.win {
+   padding: 8px 8px;
+}
+
+.arrow {
+   padding: 8px 16px;
+}
+
+.active {
+   border-radius: 50px;
+   background-color: #2BFC71;
+}
