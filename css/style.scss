@@ -49,10 +49,13 @@
 }
 
 button {
-   padding: 8px 16px;
+   // padding: 8px 16px;
+   width: 40px;
+   height: 40px;
    background-color: black;
    opacity: 0.5;
    border-radius: 4px;
+   text-align: center;
    color: white;
    transition: 0.7s;
 
@@ -65,47 +68,39 @@ button {
    opacity: 1;
 }
 
+.backspace {
+   width: 100px;
+}
+
+.tab {
+   width: 60px;
+}
+
 .enter {
-   padding: 8px 20px;
+   width: 80px;
+}
+
+.caps-lock {
+   width: 80px;
 }
 
 .shift-left {
-   padding: 8px 28px;
+   width: 70px;
 }
 
 .space {
-   padding: 8px 80px;
-}
-
-.shift-right {
-   padding: 8px 10px;
-}
-
-.ctrl {
-   padding: 8px 12px;
-}
-
-.fn {
-   padding: 8px 12px;
-}
-
-.opt {
-   padding: 8px 12px;
+   width: 250px;
 }
 
 .meta {
-   padding: 8px 8px;
-}
-
-.win {
-   padding: 8px 8px;
-}
-
-.arrow {
-   padding: 8px 16px;
+   width: 50px;
 }
 
 .active {
    border-radius: 50px;
    background-color: #2BFC71;
+}
+
+.text {
+   text-align: center;
 }
