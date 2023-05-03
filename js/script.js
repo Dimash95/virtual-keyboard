@@ -296,14 +296,3 @@ document.addEventListener('keydown', (event) => {
 });
 
 // MOUSE
-document.querySelectorAll('.insideKeyboard button').forEach((e) => {
-  e.onclick = () => {
-    document.querySelectorAll('.insideKeyboard button').forEach((element) => {
-      element.classList.remove('active');
-    });
-    const code = this.getAttribute('data');
-    this.classList.add('active');
-
-    textarea.value += code;
-  };
-});
