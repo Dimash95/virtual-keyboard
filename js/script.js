@@ -1,4 +1,3 @@
-/* eslint-disable no-plusplus */
 const { body } = document;
 
 const wrapper = document.createElement('div');
@@ -75,7 +74,7 @@ const kWord = kWordLow;
 // add kWord inside insideKeyboard and add class
 const init = () => {
   let out = '';
-  for (let i = 0; i < kWord.length; i++) {
+  for (let i = 0; i < kWord.length; i += 1) {
     out += `<button class="btn-${i} btn" data="${keyCode[i]}">${kWord[i]}</button>`;
   }
   document.querySelector('.insideKeyboard').innerHTML = out;
@@ -86,7 +85,6 @@ const backspace = document.querySelector('.btn-13');
 const tab = document.querySelector('.btn-14');
 const enter = document.querySelector('.btn-27');
 const capsLock = document.querySelector('.btn-28');
-const backslash = document.querySelector('.btn-40');
 const shiftLeft = document.querySelector('.btn-41');
 const arrowUp = document.querySelector('.btn-53');
 const shiftRight = document.querySelector('.btn-54');
@@ -196,11 +194,11 @@ document.addEventListener('keydown', (event) => {
 document.addEventListener('keydown', (event) => {
   if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
     if (insideKeyboard.children[0].innerHTML === kWordLow[0]) {
-      for (let i = 0; i < insideKeyboard.children.length; i++) {
+      for (let i = 0; i < insideKeyboard.children.length; i += 1) {
         insideKeyboard.children[i].innerHTML = kWordUp[i];
       }
     } else if (insideKeyboard.children[0].innerHTML === '&gt;') {
-      for (let i = 0; i < insideKeyboard.children.length; i++) {
+      for (let i = 0; i < insideKeyboard.children.length; i += 1) {
         insideKeyboard.children[i].innerHTML = rusUp[i];
       }
     }
@@ -210,11 +208,11 @@ document.addEventListener('keydown', (event) => {
 document.addEventListener('keyup', (event) => {
   if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
     if (insideKeyboard.children[0].innerHTML === kWordUp[0]) {
-      for (let i = 0; i < insideKeyboard.children.length; i++) {
+      for (let i = 0; i < insideKeyboard.children.length; i += 1) {
         insideKeyboard.children[i].innerHTML = kWordLow[i];
       }
     } else if (insideKeyboard.children[0].innerHTML === rusUp[0]) {
-      for (let i = 0; i < insideKeyboard.children.length; i++) {
+      for (let i = 0; i < insideKeyboard.children.length; i += 1) {
         insideKeyboard.children[i].innerHTML = rusLow[i];
       }
     }
@@ -224,11 +222,11 @@ document.addEventListener('keyup', (event) => {
 document.addEventListener('keydown', (event) => {
   if (event.key === 'CapsLock') {
     if (insideKeyboard.children[0].innerHTML === kWordLow[0]) {
-      for (let i = 0; i < insideKeyboard.children.length; i++) {
+      for (let i = 0; i < insideKeyboard.children.length; i += 1) {
         insideKeyboard.children[i].innerHTML = kWordUp[i];
       }
     } else if (insideKeyboard.children[0].innerHTML === '&gt;') {
-      for (let i = 0; i < insideKeyboard.children.length; i++) {
+      for (let i = 0; i < insideKeyboard.children.length; i += 1) {
         insideKeyboard.children[i].innerHTML = rusUp[i];
       }
     }
@@ -238,11 +236,11 @@ document.addEventListener('keydown', (event) => {
 document.addEventListener('keyup', (event) => {
   if (event.key === 'CapsLock') {
     if (insideKeyboard.children[0].innerHTML === kWordUp[0]) {
-      for (let i = 0; i < insideKeyboard.children.length; i++) {
+      for (let i = 0; i < insideKeyboard.children.length; i += 1) {
         insideKeyboard.children[i].innerHTML = kWordLow[i];
       }
     } else if (insideKeyboard.children[0].innerHTML === rusUp[0]) {
-      for (let i = 0; i < insideKeyboard.children.length; i++) {
+      for (let i = 0; i < insideKeyboard.children.length; i += 1) {
         insideKeyboard.children[i].innerHTML = rusLow[i];
       }
     }
@@ -253,19 +251,19 @@ document.addEventListener('keyup', (event) => {
 document.addEventListener('keydown', (event) => {
   if (event.altKey && event.ctrlKey) {
     if (insideKeyboard.children[0].innerHTML === '§') {
-      for (let i = 0; i < insideKeyboard.children.length; i++) {
+      for (let i = 0; i < insideKeyboard.children.length; i += 1) {
         insideKeyboard.children[i].innerHTML = rusLow[i];
       }
     } else if (insideKeyboard.children[0].innerHTML === '&gt;') {
-      for (let i = 0; i < insideKeyboard.children.length; i++) {
+      for (let i = 0; i < insideKeyboard.children.length; i += 1) {
         insideKeyboard.children[i].innerHTML = kWordLow[i];
       }
     } else if (insideKeyboard.children[0].innerHTML === '±') {
-      for (let i = 0; i < insideKeyboard.children.length; i++) {
+      for (let i = 0; i < insideKeyboard.children.length; i += 1) {
         insideKeyboard.children[i].innerHTML = rusUp[i];
       }
     } else if (insideKeyboard.children[0].innerHTML === '!') {
-      for (let i = 0; i < insideKeyboard.children.length; i++) {
+      for (let i = 0; i < insideKeyboard.children.length; i += 1) {
         insideKeyboard.children[i].innerHTML = kWordUp[i];
       }
     }
@@ -276,19 +274,19 @@ document.addEventListener('keydown', (event) => {
 document.addEventListener('keydown', (event) => {
   if (event.ctrlKey && event.code === 'Space') {
     if (insideKeyboard.children[0].innerHTML === '§') {
-      for (let i = 0; i < insideKeyboard.children.length; i++) {
+      for (let i = 0; i < insideKeyboard.children.length; i += 1) {
         insideKeyboard.children[i].innerHTML = rusLow[i];
       }
     } else if (insideKeyboard.children[0].innerHTML === '&gt;') {
-      for (let i = 0; i < insideKeyboard.children.length; i++) {
+      for (let i = 0; i < insideKeyboard.children.length; i += 1) {
         insideKeyboard.children[i].innerHTML = kWordLow[i];
       }
     } else if (insideKeyboard.children[0].innerHTML === '±') {
-      for (let i = 0; i < insideKeyboard.children.length; i++) {
+      for (let i = 0; i < insideKeyboard.children.length; i += 1) {
         insideKeyboard.children[i].innerHTML = rusUp[i];
       }
     } else if (insideKeyboard.children[0].innerHTML === '!') {
-      for (let i = 0; i < insideKeyboard.children.length; i++) {
+      for (let i = 0; i < insideKeyboard.children.length; i += 1) {
         insideKeyboard.children[i].innerHTML = kWordUp[i];
       }
     }
